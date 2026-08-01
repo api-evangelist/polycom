@@ -1,8 +1,29 @@
 aid: polycom
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/polycom.png
 name: Polycom
-description: Polycom is a company surfaced as a portfolio company of accel, norwest-venture-partners and
-  added to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: >-
+  Polycom, Inc. was a pioneer of unified communications and video conferencing,
+  known for its RealPresence video collaboration platform, SoundStation
+  conference phones, and Group Series and HDX room video endpoints. Polycom
+  merged with Plantronics in 2018 to form Poly, which HP acquired in 2022; the
+  polycom.com domain now redirects to HP's Poly product line. For developers,
+  Polycom exposed the RealPresence Platform REST API (via the RealPresence
+  Resource Manager and Distributed Media Application, later branded Clariti)
+  along with device REST APIs on its VideoOS endpoints, enabling programmatic
+  conference control, scheduling, provisioning, resource monitoring, and billing
+  integration. Developer resources are now consolidated under HP's Poly
+  developer portal.
 url: https://raw.githubusercontent.com/api-evangelist/polycom/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -13,15 +34,46 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
-apis: []
+- Video Conferencing
+- Unified Communications
+- Collaboration
+- Telepresence
+- RealPresence
+- Hardware
+- Poly
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+apis:
+- name: RealPresence Platform REST API
+  description: >-
+    REST API for the Polycom RealPresence Platform (RealPresence Resource
+    Manager / Distributed Media Application, later Poly Clariti). Integrates the
+    platform into business processes such as resource monitoring, conference
+    control, endpoint provisioning, and video conference scheduling. Served from
+    the customer's on-premises RPRM/DMA appliance host over HTTPS.
+  humanURL: https://support.hp.com/bundle/PolyClaritiAPI
+  properties:
+  - type: Documentation
+    url: https://support.hp.com/bundle/PolyClaritiAPI
 common:
 - type: Website
   url: http://www.polycom.com
+- type: DeveloperPortal
+  url: https://developers.hp.com/poly-apis
+- type: Documentation
+  url: https://support.hp.com/bundle/PolyClaritiAPI
+- type: Support
+  url: https://www.poly.com/us/en/support
+- type: DomainSecurity
+  url: security/polycom-domain-security.yml
+x-enrichment:
+  date: '2026-07-20'
+  status: minimal
+  artifacts_added: 1
+  pass: local-v1
